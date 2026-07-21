@@ -21,11 +21,10 @@ assignees:
   - KingClem9269
 
 status-website:
-  # cname: status.social-pay.io  # ← enable once the DNS CNAME exists, then remove baseUrl
-  baseUrl: /status
+  cname: status.social-pay.io
   name: Social Pay Status
   logoUrl: https://raw.githubusercontent.com/KingClem9269/status/HEAD/assets/socialpay-monogram.png
-  themeUrl: https://kingclem9269.github.io/status/socialpay-theme.css
+  themeUrl: https://status.social-pay.io/socialpay-theme.css
   customHeadHtml: |
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
