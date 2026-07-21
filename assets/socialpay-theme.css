@@ -1,7 +1,10 @@
 /* Social Pay — custom Upptime theme.
-   Brand: magenta #B71469 → orange #F0812B, ink #1A1A1A, warm bg #FFF8F3. */
+   Brand: magenta #B71469 → orange #F0812B, ink #1A1A1A, warm bg #FFF8F3.
+   NOTE: Upptime loads global.css AFTER themeUrl, and global.css redefines the
+   :root variables — so this sheet must win the cascade: :root:root doubles
+   specificity for the variables; !important guards the structural overrides. */
 
-:root {
+:root:root {
   --body-background-color: #FFF8F3;
   --body-text-color: #1A1A1A;
   --card-background-color: #ffffff;
@@ -25,51 +28,48 @@
   --submit-button-background-color: #B71469;
   --submit-button-color: #ffffff;
   --graph-opacity: 1;
-  --graph-filter: none;
+  --graph-filter: hue-rotate(120deg) saturate(1.4);
 }
 
 /* ---- Typography ---- */
-body {
+html body {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
+    "Helvetica Neue", Arial, sans-serif !important;
   -webkit-font-smoothing: antialiased;
   letter-spacing: -0.01em;
 }
-h1, h2, h3 { letter-spacing: -0.02em; font-weight: 800; }
+h1, h2, h3 { letter-spacing: -0.02em !important; font-weight: 800 !important; }
 
 /* ---- Nav: white bar with a brand-gradient top stripe ---- */
-nav {
-  border-top: 4px solid;
-  border-image: linear-gradient(90deg, #B71469, #F0812B) 1;
+html nav {
+  border-top: 4px solid !important;
+  border-image: linear-gradient(90deg, #B71469, #F0812B) 1 !important;
   box-shadow: 0 1px 3px rgba(26, 26, 26, 0.04);
 }
-nav img { height: 30px; width: auto; }
+nav img { height: 30px !important; width: auto !important; }
 
 /* ---- Intro: gradient brand name ---- */
 .lead strong, h1 strong {
   background: linear-gradient(90deg, #B71469, #F0812B);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
   color: #B71469; /* fallback */
 }
 
 /* ---- Cards: rounded, soft elevation ---- */
 article, .link {
   border-radius: 14px !important;
-  box-shadow: 0 1px 3px rgba(26, 26, 26, 0.05);
+  box-shadow: 0 1px 3px rgba(26, 26, 26, 0.05) !important;
 }
 
 /* Live-status range tabs (24h / 7d / 30d / 1y / all) */
-.live-status a, .live-status button { color: #B71469; }
+.live-status a, .live-status button { color: #B71469 !important; }
 
 /* ---- Links & buttons ---- */
-a { color: #B71469; }
-a:hover { color: #8E0F52; }
-button { border-radius: 999px; }
-
-/* ---- Status "operational" banner: keep it crisp ---- */
-.f.r, [class*="summary"] { border-radius: 14px; }
+main a { color: #B71469; }
+main a:hover { color: #8E0F52; }
+button { border-radius: 999px !important; }
 
 /* ---- Footer: quiet ---- */
 footer { opacity: 0.75; font-size: 0.9em; }
