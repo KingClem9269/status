@@ -24,7 +24,13 @@ status-website:
   # cname: status.social-pay.io  # ← enable once the DNS CNAME exists, then remove baseUrl
   baseUrl: /status
   name: Social Pay Status
-  theme: light
+  logoUrl: https://raw.githubusercontent.com/KingClem9269/status/HEAD/assets/socialpay-monogram.png
+  themeUrl: https://kingclem9269.github.io/status/socialpay-theme.css
+  customHeadHtml: |
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/KingClem9269/status/HEAD/assets/socialpay-monogram.png">
   introTitle: "**Social Pay** — live status of checkout, dashboard and payment APIs"
   introMessage: Real-time uptime, response times and incident history for Social Pay services.
   navbar:

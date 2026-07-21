@@ -1,0 +1,75 @@
+/* Social Pay — custom Upptime theme.
+   Brand: magenta #B71469 → orange #F0812B, ink #1A1A1A, warm bg #FFF8F3. */
+
+:root {
+  --body-background-color: #FFF8F3;
+  --body-text-color: #1A1A1A;
+  --card-background-color: #ffffff;
+  --nav-background-color: #ffffff;
+  --nav-border-bottom-color: rgba(26, 26, 26, 0.08);
+  --nav-current-border-bottom-color: #B71469;
+  --card-border-color: rgba(26, 26, 26, 0.08);
+  --down-border-left-color: #E11D48;
+  --down-background-color: #FFF1F2;
+  --degraded-border-left-color: #F0812B;
+  --up-border-left-color: #10B981;
+  --tag-color: #ffffff;
+  --tag-up-background-color: #10B981;
+  --tag-down-background-color: #E11D48;
+  --tag-degraded-background-color: #F0812B;
+  --change-background-color: #F0812B;
+  --error-button-border-color: #8E0F52;
+  --error-button-background-color: #B71469;
+  --error-button-color: #ffffff;
+  --submit-button-border-color: #8E0F52;
+  --submit-button-background-color: #B71469;
+  --submit-button-color: #ffffff;
+  --graph-opacity: 1;
+  --graph-filter: none;
+}
+
+/* ---- Typography ---- */
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: -0.01em;
+}
+h1, h2, h3 { letter-spacing: -0.02em; font-weight: 800; }
+
+/* ---- Nav: white bar with a brand-gradient top stripe ---- */
+nav {
+  border-top: 4px solid;
+  border-image: linear-gradient(90deg, #B71469, #F0812B) 1;
+  box-shadow: 0 1px 3px rgba(26, 26, 26, 0.04);
+}
+nav img { height: 30px; width: auto; }
+
+/* ---- Intro: gradient brand name ---- */
+.lead strong, h1 strong {
+  background: linear-gradient(90deg, #B71469, #F0812B);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #B71469; /* fallback */
+}
+
+/* ---- Cards: rounded, soft elevation ---- */
+article, .link {
+  border-radius: 14px !important;
+  box-shadow: 0 1px 3px rgba(26, 26, 26, 0.05);
+}
+
+/* Live-status range tabs (24h / 7d / 30d / 1y / all) */
+.live-status a, .live-status button { color: #B71469; }
+
+/* ---- Links & buttons ---- */
+a { color: #B71469; }
+a:hover { color: #8E0F52; }
+button { border-radius: 999px; }
+
+/* ---- Status "operational" banner: keep it crisp ---- */
+.f.r, [class*="summary"] { border-radius: 14px; }
+
+/* ---- Footer: quiet ---- */
+footer { opacity: 0.75; font-size: 0.9em; }
