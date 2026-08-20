@@ -4,10 +4,10 @@
     "url": "https://checkout.social-pay.io",
     "icon": "https://icons.duckduckgo.com/ip3/checkout.social-pay.io.ico",
     "slug": "checkout-checkout-social-pay-io",
-    "status": "up",
+    "status": "down",
     "uptime": "100.00%",
-    "uptimeDay": "100.00%",
-    "uptimeWeek": "100.00%",
+    "uptimeDay": "99.94%",
+    "uptimeWeek": "99.99%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
     "time": 330,
@@ -15,16 +15,18 @@
     "timeWeek": 253,
     "timeMonth": 330,
     "timeYear": 330,
-    "dailyMinutesDown": {}
+    "dailyMinutesDown": {
+      "2026-08-20": 1
+    }
   },
   {
     "name": "Merchant Dashboard — app.social-pay.io",
     "url": "https://app.social-pay.io",
     "icon": "https://icons.duckduckgo.com/ip3/app.social-pay.io.ico",
     "slug": "merchant-dashboard-app-social-pay-io",
-    "status": "up",
+    "status": "down",
     "uptime": "100.00%",
-    "uptimeDay": "100.00%",
+    "uptimeDay": "99.97%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
@@ -33,7 +35,9 @@
     "timeWeek": 299,
     "timeMonth": 358,
     "timeYear": 358,
-    "dailyMinutesDown": {}
+    "dailyMinutesDown": {
+      "2026-08-20": 0
+    }
   },
   {
     "name": "Payments API — edge functions",
@@ -58,7 +62,7 @@
     "url": "https://social-pay.io",
     "icon": "https://icons.duckduckgo.com/ip3/social-pay.io.ico",
     "slug": "website-social-pay-io",
-    "status": "up",
+    "status": "down",
     "uptime": "100.00%",
     "uptimeDay": "100.00%",
     "uptimeWeek": "100.00%",
